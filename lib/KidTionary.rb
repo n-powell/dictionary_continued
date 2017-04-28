@@ -25,10 +25,10 @@ end
 class Definition
   @@definitions_array = []
 
-  attr_accessor :dictionary_word_definition
+  attr_accessor :definition
 
-  def initialize(dictionary_word_definition)
-    self.dictionary_word_definition = dictionary_word_definition
+  def initialize(definition)
+    self.definition = definition
   end
 
   def Definition.all
