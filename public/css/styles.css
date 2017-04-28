@@ -2,7 +2,7 @@
     color: rgba(240, 173, 78, 1);
 }
 
-.jumbotron h1 {
+.jumbotron h1, h3 {
   text-align: center;
   color: rgba(240, 173, 78, 1);
 }
@@ -11,14 +11,14 @@
   background-color: white;
   padding-top: 40px;
   padding-bottom: 40px;
-
-
+  font-size: 17px;
 }
+
+
 
 body {
   background-image: url(/img/lounge.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-
 }
