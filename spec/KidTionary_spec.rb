@@ -4,7 +4,9 @@ require "pry"
 
 
 describe(Words) do
-
+  before() do
+    Words.clear
+  end
   describe('Words#initialize') do
     it('returns the word inputted') do
       new_word = Words.new('apple','')
