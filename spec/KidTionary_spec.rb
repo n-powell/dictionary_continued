@@ -18,7 +18,7 @@ describe(Words) do
 
     it('returns the word inputted') do
       new_word = Words.new('potato','is a tomato')
-      expect(new_word.dictionary_word_definition).to(eq('is a tomato'))
+      expect(new_word.dictionary_word_definition.dictionary_word_definition).to(eq('is a tomato'))
     end
   end
 
@@ -39,7 +39,7 @@ describe(Words) do
     new_word.save
     new_word2 = Words.new('dog','barky cat')
     new_word2.save
-    expect(new_word2.dictionary_word_definition).to(eq('barky cat'))
+    expect(new_word2.dictionary_word_definition.dictionary_word_definition).to(eq('barky cat'))
     end
 
   end
