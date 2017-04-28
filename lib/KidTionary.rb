@@ -26,7 +26,7 @@ class Words
   def Words.find (input)
     found_word = nil
     @@words_array.each do |word|
-      if word.id().eql?(word.to_i())
+      if word.id().eql?(word)
         found_word = word
       end
     found_word
