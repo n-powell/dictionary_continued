@@ -1,7 +1,24 @@
-h1 {
+.jumbotron {
+    color: rgba(240, 173, 78, 1);
+}
+
+.jumbotron h1 {
   text-align: center;
+  color: rgba(240, 173, 78, 1);
 }
 
 .container {
-  text-align: center;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+
+}
+
+body {
+  background-image: url(/img/lounge.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }

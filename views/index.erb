@@ -1,13 +1,15 @@
 <h1>Type in a word and what it means!</h1>
 <form action="/word" method="post">
   <div class="form-group">
-     <input name="dictionary_word" class="form-control" type="text" placeholder="Type in a Word">
-     <input name="dictionary_word_definition" class="form-control" type="text" placeholder="Type in the definition">
+     <input name="dictionary_word" class="form-control" type="text" placeholder="Type in a Word right here!">
+     <input name="dictionary_word_definition" class="form-control" type="text" placeholder="Type in the definition right here!">
   </div>
   <hr>
+  <p>After youve wrote your dictionary word. Click the green button to add it to your dictionary!
+  or click the blue button to look at all the words you've defined!</p>
   <button type="submit" class="btn btn-success">Add the Word!</button>
 
-  <a href="/allwords">Display words</a>
+  <button href="/allwords" class="btn btn-info">See Your Dictionary!</button>
 
 
 </form>
