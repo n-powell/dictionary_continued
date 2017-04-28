@@ -9,5 +9,7 @@ class Words
     self.dictionary_word_definition = dictionary_word_definition
   end
 
-
+  def Words.all
+    @@words_array
+  end
 end
