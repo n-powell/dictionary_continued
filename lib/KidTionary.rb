@@ -7,7 +7,7 @@ class Words
 
   def initialize (dictionary_word, dictionary_word_definition)
     self.dictionary_word = dictionary_word
-    self.dictionary_word_definition = dictionary_word_definition
+    self.dictionary_word_definition = Definition.new(dictionary_word_definition)
     self.id = @@words_array.length().+(1)
   end
 
