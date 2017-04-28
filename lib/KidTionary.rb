@@ -12,4 +12,12 @@ class Words
   def Words.all
     @@words_array
   end
+
+  def save
+    @@words_array.push(self)
+  end
+
+  def Words.clear
+    @@words_array = []
+  end
 end
