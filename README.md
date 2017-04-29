@@ -1,12 +1,21 @@
-# _KidTionary!
+# _KidTionary!_
 
-###_A dictionary written for Kids_
+### _A dictionary written for Kids_
+### _Dictionary maker, April 28, 2017_
 
 
 ### Description
-live-heroku page https://polar-shore-81272.herokuapp.com/
 
 This is a dictionary written for kids, By Kids!. This page allows kids to make up words and definitions for them. They can make as many words as they would like and save those definitions in a words page. This page was written using RUBY.
+
+## Setup/Install
+
+* _Clone directory from github using git_
+* _Navigate into downloaded directory file using a terminal or your operating systems GUI finder_
+* _Download and install Ruby and the Sinatra Gem_
+* _Navigate directory and open usin ruby app.rb_
+* _Using a web browser, type in the url localhost:4567_
+* live-heroku page https://polar-shore-81272.herokuapp.com/
 
 ## Built With
 
