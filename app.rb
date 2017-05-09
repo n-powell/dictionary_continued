@@ -19,10 +19,21 @@ get('/allwords') do
   erb(:allwords)
 end
 
+get('/word/:id/add_definition') do
+  @word = Words.find(params.fetch('id').to_i)
+end
+
+post('/word/:id/add_definition') do
+  @word = Words.find(params.fetch('id').to_i)
+  new_def = Definition.new(params.fetch('add_definition').to_s)
+  @word.add_definition(new_def)
+  @word.save()
+  erb(:index)
+end
+
 post('/word') do
-  dictionary_word = params.fetch('dictionary_word')
-  dictionary_word_definition = params.fetch('dictionary_word_definition')
-  word = Words.new(dictionary_word, dictionary_word_definition)
+  word = params.fetch('word')
+  word = Words.new(word)
   @words = Words.all()
   word.save()
   erb(:allwords)

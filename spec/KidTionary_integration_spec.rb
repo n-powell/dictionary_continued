@@ -10,7 +10,7 @@ describe('the anagram path', {:type => :feature}) do
   end
   it ('Takes user input word and adds it to words page.') do
     visit('/')
-    fill_in('dictionary_word', :with => 'turtle')
+    fill_in('word', :with => 'turtle')
     click_button('Add the Word!')
     expect(page).to have_content('turtle')
   end
@@ -18,8 +18,8 @@ describe('the anagram path', {:type => :feature}) do
 
   it ('Takes user input word and adds word to this words unique info page.') do
     visit('/')
-    fill_in('dictionary_word', :with => 'turtle')
-    fill_in('dictionary_word_definition', :with => 'small')
+    fill_in('word', :with => 'turtle')
+    fill_in('definition', :with => 'small')
     click_button('Add the Word!')
     visit('/word/1')
     expect(page).to have_content('turtle')
@@ -28,8 +28,8 @@ describe('the anagram path', {:type => :feature}) do
 
   it ('Takes user input definition and adds definition to correspondin words unique info page.') do
     visit('/')
-    fill_in('dictionary_word', :with => 'turtle')
-    fill_in('dictionary_word_definition', :with => 'small')
+    fill_in('word', :with => 'turtle')
+    fill_in('definition', :with => 'small')
     click_button('Add the Word!')
     visit('/word/1')
     expect(page).to have_content('small')
@@ -38,8 +38,8 @@ describe('the anagram path', {:type => :feature}) do
 
   it ('Takes user input word and definition and confirms both are on this words unique info page corresponding to its unique id.') do
     visit('/')
-    fill_in('dictionary_word', :with => 'house')
-    fill_in('dictionary_word_definition', :with => 'beds')
+    fill_in('word', :with => 'house')
+    fill_in('definition', :with => 'beds')
     click_button('Add the Word!')
     visit('/word/1')
     expect(page).to have_content('bed')

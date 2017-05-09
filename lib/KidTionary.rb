@@ -1,19 +1,25 @@
 class Words
   @@words_array = []
 
-  attr_accessor :dictionary_word
-  attr_accessor :dictionary_word_definition
-  attr_accessor :id
+  attr_accessor (:word)
+  attr_accessor (:id)
+  attr_accessor (:definitions)
 
-  def initialize (dictionary_word, dictionary_word_definition)
-    self.dictionary_word = dictionary_word
-    self.dictionary_word_definition = Definition.new(dictionary_word_definition)
-    self.id = @@words_array.length().+(1)
+
+  def initialize (word)
+    @word = word
+    @definitions = []
+    @id = @@words_array.length().+(1)
   end
 
   def Words.all
     @@words_array
   end
+
+  def id
+    @id
+  end
+
 
   def save
     @@words_array.push(self)
@@ -21,6 +27,14 @@ class Words
 
   def Words.clear
     @@words_array = []
+  end
+
+  def definitions
+    @definitions
+  end
+
+  def add_definition (definition)
+    @definitions.push(definition)
   end
 
   def Words.find (input)
@@ -35,10 +49,22 @@ class Words
 end
 
 class Definition
-  attr_accessor :definition
+  @@definitions = []
+
+  attr_accessor (:definition)
+
 
   def initialize(definition)
-    self.definition = definition
+    @definition = definition
   end
+
+  def Definition.all
+    @@definitions
+  end
+
+  def save
+    @@definitions.push(self)
+  end
+
 
 end

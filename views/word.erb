@@ -1,8 +1,21 @@
 <h5>Word defined</h5>
 
 
-<h1><%= @word.dictionary_word %></h1>
-<h2><%= @word.dictionary_word_definition.definition %></h2>
+<h1><%= @word.word %></h1>
+<h1><%= @word.definitions %></h1>
+<ul>
+  <% @word.definitions.each do |definition| %>
+    <li><% definition.definition.to_s %></li>
+  <% end %>
+</ul>
 
+
+
+<form id="add_definition" action="/word/<%= @word.id %>/add_definition" method="post">
+  <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
+  <label for="add_definition"></label>
+  <input id="add_definition" class="form-control" type="text" name="add_definition" placeholder="Add definition">
+  <button type="submit" id="add_definition" class="btn">Add definition</button>
+</form>
 
 <a href="/">Return to Main Page</a>
