@@ -2,10 +2,10 @@
 
 
 <h1><%= @word.word %></h1>
-<h1><%= @word.definitions %></h1>
+
 <ul>
   <% @word.definitions.each do |definition| %>
-    <li><% definition %></li>
+    <li><%= definition.definition %></li>
   <% end %>
 </ul>
 

@@ -16,21 +16,12 @@ class Words
     @@words_array
   end
 
-  def id
-    @id
-  end
-
-
   def save
     @@words_array.push(self)
   end
 
   def Words.clear
     @@words_array = []
-  end
-
-  def definitions
-    @definitions
   end
 
   def add_definition (definition)
@@ -49,22 +40,11 @@ class Words
 end
 
 class Definition
-  @@definitions = []
 
-  attr_accessor (:definition)
-
+  attr_reader (:definition)
 
   def initialize(definition)
     @definition = definition
   end
-
-  def Definition.all
-    @@definitions
-  end
-
-  def save
-    @@definitions.push(self)
-  end
-
 
 end
